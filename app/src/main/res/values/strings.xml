@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">18HW</string>
+    <string name="app_name">Sights 2.0</string>
     <string name="photo_date">%1$s</string>
     <string name="clear_data_button_text">clear data</string>
     <string name="take_a_photo_button_text">take a photo</string>
+    <string name="sights_around_you_button">sights around you</string>
+    <string name="take_photo_button_text">take photo</string>
 </resources>
