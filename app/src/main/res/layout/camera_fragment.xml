@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.CameraFragment">
+    tools:context=".presentation.camera.CameraFragment">
 
     <androidx.camera.view.PreviewView
         android:id="@+id/preview"
@@ -20,7 +20,7 @@
         android:id="@+id/take_photo_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="take photo"
+        android:text="@string/take_photo_button_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
