@@ -7,22 +7,37 @@
 
     <fragment
         android:id="@+id/main_fragment"
-        android:name="com.example.a18hw.presentation.MainFragment"
+        android:name="com.example.a18hw.presentation.main.MainFragment"
         android:label="Main Fragment"
         tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/main_fragment_to_camera_fragment"
             app:destination="@id/camera_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_maps_fragment"
+            app:destination="@id/maps_fragment" />
     </fragment>
 
     <fragment
         android:id="@+id/camera_fragment"
-        android:name="com.example.a18hw.presentation.CameraFragment"
+        android:name="com.example.a18hw.presentation.camera.CameraFragment"
         android:label="Camera Fragment"
         tools:layout="@layout/camera_fragment">
 
         <action
             android:id="@+id/camera_fragment_to_main_fragment"
+            app:destination="@id/main_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/maps_fragment"
+        android:name="com.example.a18hw.presentation.maps.MapsFragment"
+        android:label="Maps Fragment"
+        tools:layout="@layout/fragment_maps">
+
+
+        <action
+            android:id="@+id/action_maps_fragment_to_main_fragment"
             app:destination="@id/main_fragment" />
     </fragment>
 

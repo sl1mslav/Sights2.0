@@ -5,7 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.MainFragment">
+    tools:context=".presentation.main.MainFragment">
+
+    <Button
+        android:id="@+id/button_to_map"
+        android:text="@string/sights_around_you_button"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/photos_recycler_view"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/photos_recycler_view"
@@ -15,7 +28,7 @@
         app:layout_constraintBottom_toTopOf="@id/button_to_camera_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_to_map"
         app:spanCount="2"
         tools:listitem="@layout/recycler_photo_item" />
 
