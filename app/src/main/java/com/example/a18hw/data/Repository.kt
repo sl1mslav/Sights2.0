@@ -1,5 +1,7 @@
 package com.example.a18hw.data
 
+import com.example.a18hw.data.services.CloseLocationDto
+import com.example.a18hw.data.services.RetrofitInstance
 import com.example.a18hw.entity.Photo
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
@@ -20,5 +22,12 @@ class Repository @Inject constructor(
         allPhotos.value.forEach {
             photoDao.clearData(it)
         }
+    }
+
+    suspend fun getCloseLocationsFromAPI(latitude: Double, longitude: Double): List<CloseLocationDto> {
+        return RetrofitInstance.openTripMapAPI.getCloseSightsFromAPI(
+            latitude = latitude,
+            longitude = longitude
+        )
     }
 }
